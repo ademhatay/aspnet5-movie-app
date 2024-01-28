@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MovieApp.Web.Models;
 
 namespace MovieApp.Web.Controllers
 {
@@ -8,16 +9,19 @@ namespace MovieApp.Web.Controllers
 
         public IActionResult Index()
         {
-            string movieTitle = "The Godfather";
-            string movieDescription = "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.";
-            string movieDirector = "Francis Ford Coppola";
-            string[] actors = { "Marlon Brando", "Al Pacino", "James Caan" };
+            string filmBasligi = "The Godfather";
+            string filmAciklamasi = "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.";
+            string filmYonetmen = "Francis Ford Coppola";
+            string[] oyuncular = { "Marlon Brando", "Al Pacino", "James Caan" };
 
-            ViewBag.MovieTitle = movieTitle;
-            ViewBag.MovieDescription = movieDescription;
-            ViewBag.MovieDirector = movieDirector;
-            ViewBag.Actors = actors;
-            return View();
+            var m = new Movie();
+
+            m.Title = filmBasligi;
+            m.Description = filmAciklamasi;
+            m.Director = filmYonetmen;
+            m.Players = oyuncular;
+
+            return View(m);
         }
 
         // /movies/list

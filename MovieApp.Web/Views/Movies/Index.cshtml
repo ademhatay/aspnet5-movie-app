@@ -1,4 +1,6 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model MovieApp.Web.Models.Movie
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 </head>
@@ -6,14 +8,14 @@
     <h1>Film Listesi</h1>
     <div id="filmler">
         <div class="film">
-            <p>@ViewBag.movieTitle</p>
-            <p>@ViewBag.movieDescription</p>
-            <p>@ViewBag.movieDirector</p>
+            <p>@Model.Title</p>
+            <p>@Model.Description</p>
+            <p>@Model.Director</p>
             <p>
                 <ul>
-                    @foreach (var item in ViewBag.actors)
+                    @foreach (var player in @Model.Players)
                     {
-                        <li>@item</li>
+                        <li>@player</li>
                     }
                 </ul>
             </p>
