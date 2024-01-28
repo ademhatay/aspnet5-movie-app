@@ -6,6 +6,11 @@ namespace MovieApp.Web.Controllers
     {
         // action methods
 
+        public string Index()
+        {
+            return "Film Listesi";
+        }
+
         // /movies/list
         public string List()
         {
