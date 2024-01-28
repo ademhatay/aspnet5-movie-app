@@ -8,6 +8,15 @@ namespace MovieApp.Web.Controllers
 
         public IActionResult Index()
         {
+            string movieTitle = "The Godfather";
+            string movieDescription = "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.";
+            string movieDirector = "Francis Ford Coppola";
+            string[] actors = { "Marlon Brando", "Al Pacino", "James Caan" };
+
+            ViewBag.MovieTitle = movieTitle;
+            ViewBag.MovieDescription = movieDescription;
+            ViewBag.MovieDirector = movieDirector;
+            ViewBag.Actors = actors;
             return View();
         }
 
