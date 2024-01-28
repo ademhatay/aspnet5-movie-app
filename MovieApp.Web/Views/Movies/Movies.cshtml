@@ -6,20 +6,7 @@
 
     @foreach (var movie in Model)
     {
-        <div class="film">
-            <img src="/img/@movie.ImageUrl" alt="@movie.Title" />
-            <p>@movie.Title</p>
-            <p>@movie.Description</p>
-            <p>@movie.Director</p>
-            <p>
-                <ul>
-                    @foreach (var player in movie.Players)
-                    {
-                        <li>@player</li>
-                    }
-                </ul>
-            </p>
-        </div>
+        @await Html.PartialAsync("_movie", movie)
     }
 </div>
 
