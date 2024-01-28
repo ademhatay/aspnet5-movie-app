@@ -22,7 +22,44 @@ namespace MovieApp.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                   name: "home",
+                   pattern: "",
+                   defaults: new { controller = "Home", action = "Index" }
+               );
+
+                endpoints.MapControllerRoute(
+                   name: "about",
+                   pattern: "about",
+                   defaults: new { controller = "Home", action = "About" }
+               );
+
+                endpoints.MapControllerRoute(
+                   name: "movieList",
+                   pattern: "movies/list",
+                   defaults: new { controller = "Movies", action = "List" }
+               );
+                endpoints.MapControllerRoute(
+                    name: "movieList",
+                    pattern: "movies/list",
+                    defaults: new { controller = "Movies", action = "List" }
+                );
+
+                endpoints.MapControllerRoute(
+                   name: "movieDetails",
+                   pattern: "movies/details",
+                   defaults: new { controller = "Movies", action = "Details" }
+               );
+            });
         }
     }
 }
