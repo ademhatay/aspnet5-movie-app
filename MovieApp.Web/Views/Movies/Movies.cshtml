@@ -3,13 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <style>
-        .film {
-            border: 1px solid #000;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link href="/css/style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -19,6 +13,7 @@
         @foreach (var movie in Model)
         {
             <div class="film">
+                <img src="/img/@movie.ImageUrl" alt="@movie.Title" />
                 <p>@movie.Title</p>
                 <p>@movie.Description</p>
                 <p>@movie.Director</p>
