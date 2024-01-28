@@ -6,21 +6,21 @@ namespace MovieApp.Web.Controllers
     {
         // action methods
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "Film Listesi";
+            return View();
         }
 
         // /movies/list
-        public string List()
+        public IActionResult List()
         {
-            return "Film Listesi";
+            return View("Movies");
         }
 
         // /movies/details
-        public string Details()
+        public IActionResult Details()
         {
-            return "Film Detayları";
+            return View();
         }
     }
 }
