@@ -11,15 +11,26 @@
 <body>
 
     @await Html.PartialAsync("_navbar")
+    @RenderSection("header", required: false)
 
     <div class="container mt-3">
+
         <div class="row">
-            <div class="col-md-3">
-                @await Html.PartialAsync("_menu")
-            </div>
-            <div class="col-md-9">
-                @RenderBody()
-            </div>
+            @if (IsSectionDefined("menu"))
+            {
+                <div class="col-md-3">
+                    @RenderSection("menu", required: false)
+                </div>
+                <div class="col-md-9">
+                    @RenderBody()
+                </div>
+            }
+            else
+            {
+                <div class="col-md-12">
+                    @RenderBody()
+                </div>
+            }
         </div>
     </div>
 

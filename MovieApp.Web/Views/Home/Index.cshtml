@@ -1,5 +1,9 @@
 ﻿
-@await Html.PartialAsync("_header")
+
+@section header {
+    @await Html.PartialAsync("_header")
+}
+
 <h1>Film Listesi</h1>
 <div id="filmler">
     <div class="film">
