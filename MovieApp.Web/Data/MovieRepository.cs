@@ -14,57 +14,30 @@ namespace MovieApp.Web.Data
             {
                 new Movie() {
                     MovieId = 1,
-                    Title = "The Godfather",
+                    Title = "Film 1",
                     Description = "Description1",
                     Director = "Director1",
-                    Players = new string[] { "Marlon Brando", "Al Pacino", "James Caan" },
-                    ImageUrl = "Godfather.jpg",
+                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
+                    ImageUrl = "1.jpg",
                     GenreId = 1
                 },
                 new Movie() {
                     MovieId = 2,
-                    Title = "The Shawshank Redemption",
+                    Title = "Movie 2",
                     Description =  "Description2",
                     Director = "Director2",
-                    Players = new string[] { "Tim Robbins", "Morgan Freeman", "Bob Gunton" },
-                    ImageUrl = "The-Shawshank-Redemption.jpg",
+                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
+                    ImageUrl = "3.jpg",
                     GenreId = 3
                 },
                 new Movie() {
                     MovieId = 3,
-                    Title = "The Dark Knight",
+                    Title = "Film 3",
                     Description = "Description3",
-                    Director = "Christopher Nolan",
-                    Players = new string[] { "Christian Bale", "Heath Ledger", "Aaron Eckhart" },
-                    ImageUrl = "The-Dark-Knight.jpg",
+                    Director = "Director3",
+                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
+                    ImageUrl = "4.jpg",
                     GenreId = 4
-                },
-                new Movie() {
-                    MovieId = 4,
-                    Title = "Movie 4",
-                    Description = "Description4",
-                    Director = "Director4",
-                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
-                    ImageUrl = "Godfather.jpg",
-                    GenreId = 3
-                },
-                new Movie() {
-                    MovieId = 5,
-                    Title = "Movie 5",
-                    Description = "Description5",
-                    Director = "Director5",
-                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
-                    ImageUrl = "The-Shawshank-Redemption.jpg",
-                    GenreId = 4
-                },
-                new Movie() {
-                    MovieId = 6,
-                    Title = "Movie 6",
-                    Description = "Description6",
-                    Director = "Director6",
-                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
-                    ImageUrl = "The-Dark-Knight.jpg",
-                    GenreId = 1
                 },
             };
         }
@@ -79,6 +52,7 @@ namespace MovieApp.Web.Data
 
         public static void Add(Movie movie)
         {
+            movie.MovieId = _movies.Count() + 1;
             _movies.Add(movie);
         }
 
