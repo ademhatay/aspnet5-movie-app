@@ -13,7 +13,7 @@ namespace MovieApp.Web.Controllers
         // /movies/list/1
         public IActionResult List(int? id)
         {
-           var movies = MovieRepository.Movies;
+            var movies = MovieRepository.Movies;
 
             if (id != null)
             {
