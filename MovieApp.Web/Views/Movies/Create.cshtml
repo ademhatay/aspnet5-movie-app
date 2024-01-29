@@ -21,7 +21,7 @@
     </div>
     <div class="form-group">
         <label asp-for="GenreId"></label>
-        <input class="form-control" asp-for="GenreId" />
+<select class="form-control" asp-for="GenreId" asp-items="ViewBag.Genres"></select>
     </div>
     <button class="btn btn-primary" type="submit">Create</button>
 </form>
