@@ -20,10 +20,10 @@ namespace MovieApp.Web.Controllers
             return View("Movies", model);
         }
 
-        // /movies/details
-        public IActionResult Details()
+        // /movies/details/1
+        public IActionResult Details(int id)
         {
-            return View();
+            return View(MovieRepository.GetById(id));
         }
     }
 }

@@ -23,13 +23,6 @@ namespace MovieApp.Web.Data
                 new Genre() { GenreId = 9, Name = "Crime" },
                 new Genre() { GenreId = 10, Name = "Thriller" },
                 new Genre() { GenreId = 11, Name = "Fantasy" },
-                new Genre() { GenreId = 12, Name = "Animation" },
-                new Genre() { GenreId = 13, Name = "Family" },
-                new Genre() { GenreId = 14, Name = "Western" },
-                new Genre() { GenreId = 15, Name = "History" },
-                new Genre() { GenreId = 16, Name = "Music" },
-                new Genre() { GenreId = 17, Name = "Mystery" },
-                new Genre() { GenreId = 18, Name = "Documentary" },
             };
         }
 
