@@ -1,4 +1,4 @@
-﻿<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+﻿<nav class="navbar navbar-expand-md navbar-dark bg-danger">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
             <span class="navbar-toggler-icon"></span>
@@ -10,6 +10,11 @@
                     <a href="/movies/list" class="nav-link">Movies</a>
                 </li>
             </ul>
+
+            <form action="/movies/list/" method="get" class="form-inline">
+                <input name="q" class="form-control mr-2" type="text" placeholder="Search Movie..." />
+                <button type="submit" class="btn btn-outline-light mr-0">Search</button>
+            </form>
         </div>
     </div>
 </nav>

@@ -11,13 +11,18 @@ namespace MovieApp.Web.Controllers
         // action methods
         // /movies/list
         // /movies/list/1
-        public IActionResult List(int? id)
+        public IActionResult List(int? id, string q)
         {
             var movies = MovieRepository.Movies;
 
             if (id != null)
             {
                 movies = movies.Where(i => i.GenreId == id).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(q))
+            {
+                movies = movies.Where(i => i.Title.ToLower().Contains(q.ToLower()) || i.Description.ToLower().Contains(q.ToLower())).ToList();
             }
 
             var model = new MoviesViewModel()
