@@ -3,10 +3,18 @@
 
 <h1>Movie List</h1>
 <div id="filmler">
-
-    @foreach (var movie in Model.Movies)
+    @if (Model.Movies.Count() > 0)
     {
-        @await Html.PartialAsync("_movie", movie)
+        <div class="row">
+            @foreach (var movie in Model.Movies)
+            {
+                @await Html.PartialAsync("_movie", movie)
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning">No movies found.</div>
     }
 </div>
 

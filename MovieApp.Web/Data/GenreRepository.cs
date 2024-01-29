@@ -16,13 +16,6 @@ namespace MovieApp.Web.Data
                 new Genre() { GenreId = 2, Name = "Action" },
                 new Genre() { GenreId = 3, Name = "Science Fiction" },
                 new Genre() { GenreId = 4, Name = "Drama" },
-                new Genre() { GenreId = 5, Name = "Romance" },
-                new Genre() { GenreId = 6, Name = "Horror" },
-                new Genre() { GenreId = 7, Name = "Adventure" },
-                new Genre() { GenreId = 8, Name = "War" },
-                new Genre() { GenreId = 9, Name = "Crime" },
-                new Genre() { GenreId = 10, Name = "Thriller" },
-                new Genre() { GenreId = 11, Name = "Fantasy" },
             };
         }
 
