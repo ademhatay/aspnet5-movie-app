@@ -3,6 +3,7 @@
 <h1>Edit Movie</h1>
 <hr />
 <form method="post" asp-controller="Movies" asp-action="Edit">
+    <input type="hidden" asp-for="MovieId" value="@Model.MovieId" />
     <div class="form-group">
         <label asp-for="Title"></label>
         <input class="form-control" asp-for="Title" name="Title" value="@Model.Title" />
@@ -23,5 +24,5 @@
         <label asp-for="GenreId"></label>
         <input class="form-control" asp-for="GenreId" value="@Model.GenreId" />
     </div>
-    <button class="btn btn-primary" type="submit">Create</button>
+    <button class="btn btn-primary" type="submit">Edit</button>
 </form>

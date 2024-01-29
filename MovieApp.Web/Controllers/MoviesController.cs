@@ -73,7 +73,9 @@ namespace MovieApp.Web.Controllers
         [HttpPost]
         public IActionResult Edit(Movie m)
         {
-            return RedirectToAction("List", "Movies");
+            MovieRepository.Edit(m);
+            // /movies/details/1
+            return RedirectToAction("Details", "Movies", new {id = m.MovieId});
         }
     }
 }
