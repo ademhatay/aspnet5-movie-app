@@ -9,11 +9,12 @@
         <div class="col-md-9">
             <div class="card-body p-0">
                 <h5 class="card-title">@Model.Title</h5>
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-around py-2">
                     <a class="btn btn-primary" asp-controller="Movies" asp-action="Details" asp-route-id="@Model.MovieId">Details</a>
                     <a class="btn btn-warning" asp-controller="Movies" asp-action="Edit" asp-route-id="@Model.MovieId">Edit</a>
 
                     <form asp-controller="Movies" asp-action="Delete" method="Post">
+                        <input type="hidden" asp-for="Title" value="@Model.Title" />
                         <input type="hidden" asp-for="MovieId" value="@Model.MovieId" />
                         <button class="btn btn-danger" type="submit">Delete</button>
                     </form>

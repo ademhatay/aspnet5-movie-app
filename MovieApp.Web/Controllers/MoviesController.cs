@@ -53,6 +53,7 @@ namespace MovieApp.Web.Controllers
             if (ModelState.IsValid)
             {
                 MovieRepository.Add(m);
+                TempData["Message"] = $"{m.Title} added";
                 return RedirectToAction("List", "Movies");
             }
 
@@ -85,9 +86,10 @@ namespace MovieApp.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(int MovieId)
+        public IActionResult Delete(int MovieId, string Title)
         {
             MovieRepository.Delete(MovieId);
+            TempData["Message"]= $"{Title} deleted";
             return RedirectToAction("List", "Movies");
         }
     }

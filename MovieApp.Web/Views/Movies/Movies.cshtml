@@ -2,6 +2,7 @@
 
 
 <div id="filmler">
+
     @if (Model.Movies.Count() > 0)
     {
         <div class="row">
@@ -16,6 +17,14 @@
         <div class="alert alert-warning">No movies found.</div>
     }
 </div>
+
+@if (TempData["Message"] != null)
+{
+    @section message
+    {
+        @await Html.PartialAsync("_message", (String)TempData["Message"])
+    }
+}
 
 @section menu
 {

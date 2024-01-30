@@ -10,6 +10,8 @@
 </head>
 <body>
 
+    @RenderSection("message", required: false)
+
     @await Html.PartialAsync("_navbar")
     @RenderSection("header", required: false)
 
