@@ -50,20 +50,15 @@ namespace MovieApp.Web.Controllers
         [HttpPost]
         public IActionResult Create(Movie m)
         {
-            // Model Binding
+            if (ModelState.IsValid)
+            {
+                MovieRepository.Add(m);
+                return RedirectToAction("List", "Movies");
+            }
 
-            //var m = new Movie()
-            //{
-            //    Title = Title,
-            //    Description = Description,
-            //    Director = Director,
-            //    ImageUrl = ImageUrl,
-            //    GenreId = GenreId
-            //};
+            ViewBag.Genres = new SelectList(GenreRepository.Genres, "GenreId", "Name");
 
-            MovieRepository.Add(m);
-
-            return RedirectToAction("List", "Movies");
+            return View();
         }
 
         [HttpGet]
@@ -76,9 +71,24 @@ namespace MovieApp.Web.Controllers
         [HttpPost]
         public IActionResult Edit(Movie m)
         {
-            MovieRepository.Edit(m);
-            // /movies/details/1
-            return RedirectToAction("Details", "Movies", new {id = m.MovieId});
+
+            if (ModelState.IsValid)
+            {
+                MovieRepository.Edit(m);
+                // /movies/details/1
+                return RedirectToAction("Details", "Movies", new { id = m.MovieId });
+            }
+
+            ViewBag.Genres = new SelectList(GenreRepository.Genres, "GenreId", "Name");
+            return View(m);
+            
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int MovieId)
+        {
+            MovieRepository.Delete(MovieId);
+            return RedirectToAction("List", "Movies");
         }
     }
 }

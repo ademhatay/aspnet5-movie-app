@@ -1,4 +1,4 @@
-﻿@model Movie 
+﻿@model Movie
 
 <h1>Create Movie</h1>
 <hr />
@@ -6,22 +6,27 @@
     <div class="form-group">
         <label asp-for="Title"></label>
         <input class="form-control" asp-for="Title" name="Title" />
+        <span asp-validation-for="Title" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Description"></label>
         <textarea class="form-control" asp-for="Description"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Director"></label>
         <input class="form-control" asp-for="Director" />
+        <span asp-validation-for="Director" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="ImageUrl"></label>
         <input class="form-control" asp-for="ImageUrl" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="GenreId"></label>
-<select class="form-control" asp-for="GenreId" asp-items="ViewBag.Genres"></select>
+        <select class="form-control" asp-for="GenreId" asp-items="ViewBag.Genres"></select>
+        <span asp-validation-for="GenreId" class="text-danger"></span>
     </div>
     <button class="btn btn-primary" type="submit">Create</button>
 </form>
