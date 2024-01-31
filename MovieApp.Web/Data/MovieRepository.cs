@@ -17,7 +17,6 @@ namespace MovieApp.Web.Data
                     Title = "Film 1",
                     Description = "Description1",
                     Director = "Director1",
-                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
                     ImageUrl = "1.jpg",
                     GenreId = 1
                 },
@@ -26,7 +25,6 @@ namespace MovieApp.Web.Data
                     Title = "Movie 2",
                     Description =  "Description2",
                     Director = "Director2",
-                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
                     ImageUrl = "3.jpg",
                     GenreId = 3
                 },
@@ -35,7 +33,6 @@ namespace MovieApp.Web.Data
                     Title = "Film 3",
                     Description = "Description3",
                     Director = "Director3",
-                    Players = new string[] { "Player 1", "Player 2", "Player 3" },
                     ImageUrl = "4.jpg",
                     GenreId = 4
                 },
