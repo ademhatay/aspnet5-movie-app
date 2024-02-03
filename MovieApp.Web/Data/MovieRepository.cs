@@ -16,7 +16,6 @@ namespace MovieApp.Web.Data
                     MovieId = 1,
                     Title = "Film 1",
                     Description = "Description1",
-                    Director = "Director1",
                     ImageUrl = "1.jpg",
                     GenreId = 1
                 },
@@ -24,7 +23,6 @@ namespace MovieApp.Web.Data
                     MovieId = 2,
                     Title = "Movie 2",
                     Description =  "Description2",
-                    Director = "Director2",
                     ImageUrl = "3.jpg",
                     GenreId = 3
                 },
@@ -32,7 +30,6 @@ namespace MovieApp.Web.Data
                     MovieId = 3,
                     Title = "Film 3",
                     Description = "Description3",
-                    Director = "Director3",
                     ImageUrl = "4.jpg",
                     GenreId = 4
                 },
@@ -67,7 +64,6 @@ namespace MovieApp.Web.Data
                 {
                     movie.Title = m.Title;
                     movie.Description = m.Description;
-                    movie.Director = m.Director;
                     movie.ImageUrl = m.ImageUrl;
                     movie.GenreId = m.GenreId;
                     break;
